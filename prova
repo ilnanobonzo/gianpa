@@ -1,0 +1,44 @@
+//autore: francesco ferrari
+//
+
+#include <iostream>
+#include "libtuttofare.h"
+using namespace std;
+int main(){
+	setlocale(LC_ALL, "Italian");
+	int m=0;
+	float a,b;
+	int c,d;
+	float e,f;
+	
+	do{
+		m=menu();
+		switch(m){
+			case 1:{
+				dati(a,b,c,d);
+				break;
+			}
+			case 2:{
+				e=calcoli(a,b);
+				f=calcoli2(c,d);
+				cout << "calcoli fatti." << endl;
+				break;
+			}
+			case 3:{
+				stampa(e,f);
+				break;
+			}
+			case 4:{
+				
+				break;
+			}
+			default :{
+				cout << "inserire una delle opzioni indicate";
+				break;
+			}
+		system("pause");
+		}
+	}while(m!=4);
+     return 0;
+}
+
